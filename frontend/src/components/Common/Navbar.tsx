@@ -8,7 +8,7 @@ import CartDrawer from "../Layout/CartDrawer";
 import { IoMdClose } from "react-icons/io";
 
 function Navbar() {
-  const [drawerOpen, setDrawerOpen] = useState(true);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [navDrawerOpen, setNavDrawerOpen] = useState(false);
 
   const toggleCartDrawer = () => {
@@ -21,11 +21,8 @@ function Navbar() {
   return (
     <>
       <nav className="container mx-auto flex items-center justify-between py-4 px-6">
-        <Link
-          to="/"
-          className="group text-2xl flex items-center space-x-2 p-2 border-4 border-gray-600 border-dashed rounded-2xl hover:bg-black  hover:text-white"
-        >
-          <LuRabbit className="h-6 w-6 text-gray-700 group-hover:text-white" />
+        <Link to="/" className="text-2xl flex items-center space-x-2 p-2 ">
+          <LuRabbit className="h-6 w-6 text-gray-700 " />
           <span className="font-bold">Rabbit co.</span>
         </Link>
         {/* Center nav */}
