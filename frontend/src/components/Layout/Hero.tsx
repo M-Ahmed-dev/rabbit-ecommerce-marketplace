@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroImage from "../../../public/assets/rabbit-hero.webp";
+import heroImage from "../../assets/rabbit-hero.webp";
 import { ReactTyped } from "react-typed";
 
 function Hero() {
