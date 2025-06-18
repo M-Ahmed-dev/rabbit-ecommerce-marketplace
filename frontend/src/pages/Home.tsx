@@ -1,5 +1,6 @@
 import Hero from "../components/Layout/Hero";
 import FeaturedCollection from "../components/Products/FeaturedCollection";
+import FeatureSection from "../components/Products/FeatureSection";
 import GenderCollectionSection from "../components/Products/GenderCollectionSection";
 import NewArrivals from "../components/Products/NewArrivals";
 import ProductDetail from "../components/Products/ProductDetail";
@@ -104,6 +105,7 @@ function Home() {
         <ProductGrid products={similarProducts} />
       </div>
       <FeaturedCollection />
+      <FeatureSection />
     </>
   );
 }
