@@ -242,14 +242,16 @@ function ProductDetail() {
             </div>
           </div>
         </div>
-        {/*  */}
+      </div>
 
-        <div className="mt-20">
-          <h2 className="text-2xl text-center font-medium mb-4">
-            You May Also Like
-          </h2>
-          <ProductGrid products={similarProducts} />
-        </div>
+      {/*  */}
+
+      <div className="mt-20">
+        <h2 className="text-2xl text-center font-medium mb-4">
+          You May Also Like
+        </h2>
+
+        <ProductGrid products={similarProducts} />
       </div>
     </div>
   );
