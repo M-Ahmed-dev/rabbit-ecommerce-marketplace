@@ -35,6 +35,7 @@ function FilterSidebar() {
     minPrice: 0,
     maxPrice: 100,
   });
+  const params = Object.fromEntries([...searchParams]);
 
   useEffect(() => {
     const params = Object.fromEntries([...searchParams]);
@@ -81,6 +82,15 @@ function FilterSidebar() {
     });
     setSearchParams(params);
     navigate(`?${params.toString()}`);
+  };
+
+  const handlePriceChange = (e) => {
+    const newPrice = e.target.value;
+    console.log("price", typeof newPrice);
+    setPriceRange([0, Number(newPrice)]);
+    const newFilters = { ...filter, minPrice: 0, maxPrice: newPrice };
+    setFilters(newFilters);
+    updateUrlParams(newFilters);
   };
 
   return (
@@ -210,8 +220,10 @@ function FilterSidebar() {
         </label>
 
         <input
+          onChange={handlePriceChange}
           type="range"
           name="priceRange"
+          value={Number(priceRange[1])}
           min={0}
           max={100}
           className="w-full h-2 bg-gray-300 rouned-lg appearance-none cursor-pointer"
