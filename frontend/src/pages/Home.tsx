@@ -6,7 +6,7 @@ import NewArrivals from "../components/Products/NewArrivals";
 import ProductDetail from "../components/Products/ProductDetail";
 import ProductGrid from "../components/Products/ProductGrid";
 
-const similarProducts = [
+export const similarProducts = [
   {
     _id: 1,
     name: "Product 1",
