@@ -35,7 +35,6 @@ function FilterSidebar() {
     minPrice: 0,
     maxPrice: 100,
   });
-  const params = Object.fromEntries([...searchParams]);
 
   useEffect(() => {
     const params = Object.fromEntries([...searchParams]);

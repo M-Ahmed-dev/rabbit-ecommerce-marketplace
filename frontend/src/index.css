@@ -3,6 +3,9 @@
 :root {
   --rabbit-red: #ff4444;
 }
+button {
+  cursor: pointer;
+}
 
 #root {
   font-family: "Inter" sans-serif;

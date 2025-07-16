@@ -3,6 +3,7 @@ import { similarProducts } from "./Home";
 import { FaFilter } from "react-icons/fa";
 import FilterSidebar from "../components/Products/FilterSidebar";
 import ProductGrid from "../components/Products/ProductGrid";
+import SortOptions from "../components/Products/SortOptions";
 
 function CollectionPage() {
   const [products, setProducts] = useState([]);
@@ -54,7 +55,7 @@ function CollectionPage() {
       <div className="flex-grow p-4">
         <h2 className="text-2xl uppercase mb-4">All collection</h2>
 
-        {/* <SortOptions /> */}
+        <SortOptions />
         <ProductGrid products={products} />
       </div>
     </div>

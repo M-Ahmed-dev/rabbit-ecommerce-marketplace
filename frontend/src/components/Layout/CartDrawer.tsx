@@ -1,5 +1,6 @@
 import { IoMdClose } from "react-icons/io";
 import CartContents from "../Cart/CartContents";
+import { useNavigate } from "react-router-dom";
 
 function CartDrawer({
   drawerOpen,
@@ -8,9 +9,15 @@ function CartDrawer({
   drawerOpen: boolean;
   toggleCartDrawer: () => void;
 }) {
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    navigate("/checkout");
+  };
+
   return (
     <div
-      className={`fixed top-0 right-0 w-3/4 sm:w-1/2 md:w-[30rem] h-full bg-white shadow-lg transform transition-transform duration-300 flex flex-col z-50  ${
+      className={`fixed top-0 right-0 mr-0 p-3 w-3/4 sm:w-1/2 md:w-[30rem] h-full bg-white shadow-lg transform transition-transform duration-300 flex flex-col z-50  ${
         drawerOpen ? "translate-x-0" : "translate-x-[100vw]"
       }`}
     >
@@ -27,7 +34,10 @@ function CartDrawer({
       </div>
 
       <div className="py-4 bg-white sticky bottom-0">
-        <button className="w-full bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800">
+        <button
+          onClick={handleCheckout}
+          className="w-full cursor-pointer bg-black text-white py-3 rounded-lg font-semibold hover:bg-gray-800"
+        >
           Checkout
         </button>
         <p className="text-sm tracking-tighter text-gray-500 mt-2 text-center">
